@@ -17,9 +17,13 @@
 }
 @property(nonatomic,retain)UIViewController *presentView;
 
+//void(^didFinishSelected)(UIImage* seletedImage) block回调传回选择的图片。
+//需要注意内存的释放。
 @property(nonatomic,copy) void(^didFinishSelected)(UIImage* seletedImage);
 
-// loacl  相机,相册
+/* loacl 参数 可选:相机,相册
+ 
+ */
 - (void)selectImageFromLoacl:(NSString*)loacl presentView:(UIViewController*)presentView;
 
 //打开闪光灯
